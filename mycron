@@ -1,0 +1,1 @@
+*/1 index.html index.html index.html index.html su -s /bin/sh nobody -c cd /opt/deployments/pc/test && /usr/bin/git -q pull origin master
