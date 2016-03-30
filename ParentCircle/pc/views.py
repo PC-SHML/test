@@ -14,7 +14,10 @@ def landing_page(request):
     return render_to_response('landing_page.html',locals(),context_instance = RequestContext(request))
 
 def home(request):
-    request.session.delete_test_cookie()
+    try:
+        request.session.delete_test_cookie()
+    except:
+        pass
     request.session.set_test_cookie()
     request.session['session_check'] = "This is from new session text, after 2.45pm"
     return render_to_response('home.html',locals(),context_instance = RequestContext(request))
