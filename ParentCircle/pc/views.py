@@ -16,7 +16,7 @@ def landing_page(request):
 def home(request):
     if request.session.test_cookie_worked():
         request.session.delete_test_cookie()
-        'return HttpResponse("You're logged in.")
+        '''return HttpResponse("You're logged in.")'''
         request.session.set_test_cookie()
         request.session['session_check'] = "This is from new session text, after 2.45pm"
         return render_to_response('home.html',locals(),context_instance = RequestContext(request))
